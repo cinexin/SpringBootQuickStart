@@ -18,12 +18,17 @@ public class TopicService {
 
 	
 	List<Topic> topics = Arrays.asList(
-			new Topic("1", "Java Spring", "Java Spring Framework Basis"),
-			new Topic("2", "Java Core", "Java Core Fundamentals"),
-			new Topic("3", "JavaScript", "JavaScript Language Basis")
+			new Topic("spring", "Java Spring", "Java Spring Framework Basis"),
+			new Topic("java", "Java Core", "Java Core Fundamentals"),
+			new Topic("javascript", "JavaScript", "JavaScript Language Basis")
 		);
 	
 	public List<Topic> getAllTopics() {
 		return topics;
+	}
+	
+	public Topic getTopic(String id) {
+		// lambda solution....CLASSY!!!
+		return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
 	}
 }
