@@ -9,6 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author migue
  *
+ * This is the "main" class
+ * Actually contains the "main" Java method, that starts the servlet container
+ * (@SpringBootApplication tag does the "magic")
  */
 @SpringBootApplication
 public class CourseApiApp {
