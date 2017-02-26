@@ -4,7 +4,10 @@ Following gr8 Spring Boot Tutorial from JavaBrains: https://www.youtube.com/play
 
 MADE WITH SPRING TOOL SUITE: http://spring.io/tools/sts
 
+
 To run it from Spring Tool Suite (STS), just rigth-click on "CourseApiApp" class "Run AS.. > Java Application". A servlet container will be started using 8080 port by default
+
+To debug REST methods I used the super cool RESTer Mozilla extension.
 
 We're going to build a pretty simple "REST" API for Courses Management
 
