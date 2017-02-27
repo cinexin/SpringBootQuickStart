@@ -48,4 +48,19 @@ public class TopicController {
 	public void addTopic(@RequestBody Topic topic) {
 		topicService.addTopic(topic);
 	}
+	
+	/* Method for updating an existing topic */
+	/* When "HTTP PUT" happens on /topics URI */
+	@RequestMapping(method=RequestMethod.PUT,value="/topics/{id}")
+	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
+		topicService.updateTopic(topic, id);
+	}
+	
+	
+	/* Method for deleting an existing topic by its "id" */
+	/* When "HTTP PUT" happens on /topics URI */
+	@RequestMapping(method=RequestMethod.DELETE,value="/topics/{id}")
+	public void deleteTopic(@PathVariable String id) {
+		topicService.deleteTopic(id);
+	}	
 }
