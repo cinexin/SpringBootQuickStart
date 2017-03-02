@@ -3,13 +3,28 @@
  */
 package org.cinexin.javabrains.springbootstarter.topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * @author migue
  *
+ * Model (entity) class for "Topic" object
  */
 
+/**
+ *  We mark this class as a Database (JPA) table with the "@Entity" javax.persistence annotation 
+ *  It will be mapped to a table named "Topic" with 3 columns:
+ *  id + name + description
+ *  
+ *  */
+@Entity
 public class Topic {
 	
+	/*
+	 * We mark the "id" field as the primary key with the "@Id" annotation
+	 */
+	@Id
 	private String id;
 	private String name;
 	private String description;
